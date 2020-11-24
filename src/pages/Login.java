@@ -16,7 +16,7 @@ public class Login implements CommonInterface{
 	public static int testcasecount =0;
 	
 	private void sysout() {
-
+		sysout();
 	}
 	public static void main(String[] args) throws Exception {
 
