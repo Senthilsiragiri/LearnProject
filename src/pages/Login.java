@@ -15,7 +15,9 @@ public class Login implements CommonInterface{
 	public static int screenFlag=1;
 	public static int testcasecount =0;
 	
-	
+	private void sysout() {
+
+	}
 	public static void main(String[] args) throws Exception {
 
 		objDataSheet.callGetExcelData();
