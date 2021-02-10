@@ -23,6 +23,8 @@ public class Login implements CommonInterface{
 		objDataSheet.callGetExcelData();
 		MasterScript.test = MasterScript.extent.createTest("Login", "Login in to the application ");
 		MasterScript.test.log(Status.INFO, "Number of Testcases to be executed: "+ objDataSheet.excelRowCount());
+		
+		System.out.println(objDataSheet.excelRowCount());
 	    
 		for( GetDataSheet.testCaseRow=0; GetDataSheet.testCaseRow< objDataSheet.excelRowCount(); GetDataSheet.testCaseRow++){
 			
@@ -60,17 +62,17 @@ public class Login implements CommonInterface{
 		  	 String password =  objDataSheet.getDataValue("Password").trim();
 		 	 testcasecount = GetDataSheet.testCaseRow +1;
 		  	 MasterScript.test.log(Status.INFO, testcasecount + ":"+ testCaseDesc);
-		  	 driver.get(url);
+		  	 driver.get("https://unitrax-sqa2.fst.lntinfotech.com/UnitraxWebDbSqaR02/");
 		     objaction.waitForPageToLoad(driver);
 		     driver.manage().window().maximize();
 		     //Enter user name,pwd and click login
-		     objaction.enterValue(userName, CommonPageObjects.LOGIN_USERNAME.byLocator(), driver);
+		  /*   objaction.enterValue(userName, CommonPageObjects.LOGIN_USERNAME.byLocator(), driver);
 		     objaction.enterValue(password, CommonPageObjects.LOGIN_PASSWORD.byLocator(), driver);
 		     MasterScript.test.log(Status.PASS, "Entered username and password");
 		     MasterScript.test.addScreenCaptureFromPath(objaction.capture(driver, "Login"));
 		     objaction.clickElement(CommonPageObjects.LOGIN_BUTTON.byLocator(), driver);
 	  		 MasterScript.test.log(Status.PASS, "Login button clicked");
-		
+		*/
 		} catch (Exception e) {
 			 MasterScript.test.log(Status.FAIL, "Snapshot below :Login failed");
 			 MasterScript.test.addScreenCaptureFromPath(objaction.capture(driver, "Login_Fail"));

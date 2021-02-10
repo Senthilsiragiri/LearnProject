@@ -164,8 +164,8 @@ public class ReadExcel {//implements ObjectsInterface {
 							arrayExcelhdr[colCtr] = cell.getStringCellValue();
 						}
 					} else {
-						   if (!sht.getRow(rowCtr).getCell(1).getStringCellValue().toUpperCase().equals("")) {
-							//if (!sht.getRow(rowCtr).getCell(1).getStringCellValue().toUpperCase().equals("YES")) {
+						  // if (!sht.getRow(rowCtr).getCell(1).getStringCellValue().toUpperCase().equals("")) {
+							if (sht.getRow(rowCtr).getCell(1).getStringCellValue().toUpperCase().equals("YES")) {
 							if (cell == null || cell.equals("")) {
 								value1 = "";
 							} else {

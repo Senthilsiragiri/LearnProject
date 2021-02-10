@@ -60,7 +60,7 @@ public class MasterScript   implements CommonInterface
 			String testCaseName;
 			//C:\Users\10637217\Desktop\DCCM\dccmWorkspace\dccm\Libs\drivers
 			
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\10637217\\Desktop\\DCCM\\dccmWorkspace\\dccm\\Libs\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\10637217\\Desktop\\DCCM\\Workspace\\LearnProject\\Libs\\drivers\\chromedriver.exe");
 			ExcelUtility objexcUtility = new ExcelUtility();
 			String fileName = System.getProperty("user.dir") + "\\dataSheet\\MasterFile.xlsx";
 
