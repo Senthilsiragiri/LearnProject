@@ -30,7 +30,7 @@ public class Login implements CommonInterface{
 			
 		  try {
 			  	login();
-			    verifyLogin();
+			   // verifyLogin();
 			    
 		    } catch (Exception e) {
 
